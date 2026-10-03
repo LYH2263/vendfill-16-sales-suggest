@@ -6,7 +6,7 @@ onMounted(async () => { s.value = await api('/refills/summary?location_id=1') })
 </script>
 <template>
   <h1>汇总</h1>
-  <p class="sub">本点位补货建议合计</p>
+  <p class="sub">最近一张补货单的合计（与单行一致）</p>
   <div class="card grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem">
     <div><div class="muted">建议补货总量</div><div class="stat">{{ s.total_fill }}</div></div>
     <div><div class="muted">待补货道</div><div class="stat">{{ s.need_fill_count }}</div></div>
